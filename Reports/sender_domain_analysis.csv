@@ -1,0 +1,12 @@
+sender_domain,Legitimate,Phishing,total
+company.test,149,0,149
+account.test,0,99,99
+library.test,50,0,50
+shop.test,50,0,50
+service.test,0,50,50
+bank.test,0,49,49
+payment.test,0,49,49
+museum.test,1,0,1
+example-bank.test,0,1,1
+secure.test,0,1,1
+unknown.test,0,1,1

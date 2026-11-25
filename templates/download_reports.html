@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Reports | SecureSight</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #080d1d;
+            color: #f5f7ff;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 255px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 30px 20px;
+            background: #101a30;
+            border-right: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 45px;
+            color: #fff;
+        }
+
+        .logo span {
+            color: #39d9dc;
+        }
+
+        .nav-title {
+            color: #71809e;
+            font-size: 11px;
+            letter-spacing: 2px;
+            margin: 25px 0 15px;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 13px 15px;
+            margin-bottom: 8px;
+            text-decoration: none;
+            color: #a9b6d0;
+            border-radius: 11px;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #fff;
+            background: linear-gradient(100deg, #3158a8, #633db0);
+            box-shadow: 0 5px 20px rgba(72,100,220,0.2);
+        }
+
+        .nav-link span {
+            margin-right: 12px;
+        }
+
+        .main {
+            margin-left: 255px;
+            padding: 40px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 35px;
+            gap: 15px;
+        }
+
+        .topbar h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 30px;
+        }
+
+        .topbar p {
+            color: #8795b2;
+            margin-top: 7px;
+            font-size: 14px;
+        }
+
+        .status {
+            padding: 9px 15px;
+            border-radius: 30px;
+            color: #42e4bd;
+            background: rgba(38,220,175,0.1);
+            border: 1px solid rgba(38,220,175,0.2);
+            font-size: 12px;
+        }
+
+        .hero {
+            padding: 35px;
+            border-radius: 22px;
+            background:
+                radial-gradient(circle at 90% 10%, rgba(92,75,220,0.35), transparent 35%),
+                linear-gradient(120deg, #172b50, #202044);
+            border: 1px solid rgba(125,150,255,0.2);
+            margin-bottom: 28px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 25px;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #b5c1dc;
+            line-height: 1.8;
+            max-width: 650px;
+            font-size: 14px;
+        }
+
+        .hero-icon {
+            font-size: 55px;
+            margin-bottom: 18px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+
+        .stat-card {
+            background: #131f37;
+            border: 1px solid rgba(255,255,255,0.07);
+            border-radius: 17px;
+            padding: 24px;
+            transition: 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(75,140,255,0.5);
+        }
+
+        .stat-card .icon {
+            font-size: 27px;
+            margin-bottom: 16px;
+        }
+
+        .stat-card h3 {
+            color: #8e9dbb;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .stat-card h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 29px;
+        }
+
+        .blue { color: #5c9cff; }
+        .red { color: #ff718d; }
+        .green { color: #40dfb0; }
+
+        .report-card {
+            background: #131f37;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .report-card h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .report-card p {
+            color: #8e9dbb;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 22px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 24px;
+            border-radius: 11px;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 14px;
+            background: linear-gradient(100deg, #397cf5, #8755e8);
+            box-shadow: 0 8px 25px rgba(72,105,235,0.25);
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(72,105,235,0.4);
+        }
+
+        .info-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .info-item {
+            background: #192944;
+            padding: 17px;
+            border-radius: 12px;
+            color: #b8c5df;
+            font-size: 13px;
+        }
+
+        .info-item strong {
+            display: block;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #667592;
+            font-size: 12px;
+            padding: 25px 0;
+        }
+
+        @media(max-width: 850px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 22px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .info-list {
+                grid-template-columns: 1fr;
+            }
+
+            .topbar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    
+/* SECURESIGHT UNIFIED SIDEBAR TYPOGRAPHY */
+.sidebar .logo,
+.sidebar .brand,
+.sidebar .side-brand {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+
+.sidebar .nav-title,
+.sidebar .menu-label {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+}
+
+.sidebar a,
+.sidebar .nav-link {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.sidebar a span,
+.sidebar .nav-link span {
+    font-size: 17px !important;
+}
+
+.sidebar .sidebar-status {
+    font-size: 12px !important;
+}
+/* END UNIFIED SIDEBAR TYPOGRAPHY */
+
+
+/* STANDARD SIDEBAR FONT SIZES */
+.logo, .brand.side-brand {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+.nav-title, .menu-label {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+}
+.sidebar a, .nav-link {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+.sidebar a span, .nav-link span {
+    font-size: 17px !important;
+}
+
+</style>
+</head>
+
+<body>
+
+<aside class="sidebar">
+    <div class="logo">Secure<span>Sight</span></div>
+
+    <div class="nav-title">MAIN MENU</div>
+
+    <a href="{{ url_for('dashboard') }}" class="nav-link">
+        <span>âŒ‚</span> Dashboard
+    </a>
+
+    <a href="{{ url_for('visual_analytics') }}" class="nav-link">
+        <span>â–¥</span> Visual Analytics
+    </a>
+
+    <a href="{{ url_for('sender_domains') }}" class="nav-link">
+        <span>◎</span> Sender Domains
+    </a>
+
+    <a href="{{ url_for('email_records') }}" class="nav-link">
+        <span>âœ‰</span> Email Records
+    </a>
+
+    <a href="{{ url_for('predict_email') }}" class="nav-link">
+        <span>⌕</span> Email Prediction
+    </a>
+
+    <a href="{{ url_for('download_reports') }}" class="nav-link active">
+        <span>⇩</span> Download Reports
+    </a>
+
+    <a href="{{ url_for('about') }}" class="nav-link">
+        <span>ⓘ</span> About Project
+    </a>
+
+    <div class="nav-title">ACCOUNT</div>
+
+    <a href="{{ url_for('logout') }}" class="nav-link">
+        <span>â†ª</span> Logout
+    </a>
+</aside>
+
+<main class="main">
+
+    <div class="topbar">
+        <div>
+            <h1>Download Reports</h1>
+            <p>Export and manage your phishing email analysis reports.</p>
+        </div>
+
+        <div class="status">● System Active</div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-icon">ðŸ“Š</div>
+        <h2>Your Security Reports, All in One Place</h2>
+        <p>
+            Download your email analysis records in CSV format.
+            Use these reports to review phishing and legitimate email
+            classifications and maintain your project analysis data.
+        </p>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card">
+            <div class="icon">ðŸ“§</div>
+            <h3>Total Email Records</h3>
+            <h2 class="blue">{{ total }}</h2>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon">ðŸš¨</div>
+            <h3>Phishing Emails</h3>
+            <h2 class="red">{{ phishing }}</h2>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon">🛡️ï¸</div>
+            <h3>Legitimate Emails</h3>
+            <h2 class="green">{{ legitimate }}</h2>
+        </div>
+    </section>
+
+    <section class="report-card">
+        <h2>ðŸ“ Email Analysis Report</h2>
+        <p>
+            Export all available email records, including sender,
+            subject, classification label and URL count.
+            Your report will be downloaded as a CSV file.
+        </p>
+
+        <a href="{{ url_for('download_csv') }}" class="download-btn">
+            ⇩ Download CSV Report
+        </a>
+    </section>
+
+    <section class="report-card">
+        <h2>ðŸ“‹ Report Information</h2>
+        <p>Details about the exported report.</p>
+
+        <div class="info-list">
+            <div class="info-item">
+                <strong>File Format</strong>
+                CSV (Comma Separated Values)
+            </div>
+
+            <div class="info-item">
+                <strong>Report Content</strong>
+                Sender, Subject, Label, URL Count
+            </div>
+
+            <div class="info-item">
+                <strong>Report Type</strong>
+                Email Classification Report
+            </div>
+
+            <div class="info-item">
+                <strong>Data Source</strong>
+                Project Email Dataset
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        © 2026 SecureSight | Phishing Email Analysis System
+    </div>
+
+</main>
+
+</body>
+</html>
+

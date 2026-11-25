@@ -1,0 +1,4 @@
+category,email_count,percentage
+Phishing,250,50.0
+Legitimate,250,50.0
+Unknown,0,0.0

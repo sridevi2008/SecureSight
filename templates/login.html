@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | SecureSight</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cyan: #38e5dc;
+    --blue: #5688ff;
+    --purple: #a46bff;
+    --muted: #9aa9c5;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    overflow-x: hidden;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    background:
+        radial-gradient(ellipse at 15% 15%, #315eea35, transparent 35%),
+        radial-gradient(ellipse at 85% 80%, #a04aff30, transparent 35%),
+        radial-gradient(ellipse at 50% 50%, #0c9fbd12, transparent 55%),
+        #080d1d;
+    position: relative;
+}
+
+/* BACKGROUND EFFECTS */
+
+.orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    animation: float 9s ease-in-out infinite alternate;
+}
+
+.orb-one {
+    width: 350px;
+    height: 350px;
+    background: #246cff;
+    opacity: .22;
+    top: -130px;
+    left: -100px;
+}
+
+.orb-two {
+    width: 350px;
+    height: 350px;
+    background: #a34dff;
+    opacity: .17;
+    bottom: -140px;
+    right: -100px;
+    animation-delay: 2s;
+}
+
+.orb-three {
+    width: 220px;
+    height: 220px;
+    background: #16cdbd;
+    opacity: .12;
+    top: 45%;
+    left: 65%;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    from { transform: translate(0, 0); }
+    to { transform: translate(35px, 40px); }
+}
+
+/* MAIN */
+
+.login-container {
+    width: 100%;
+    max-width: 455px;
+    position: relative;
+    z-index: 2;
+    animation: appear .8s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BRAND */
+
+.brand {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.brand-icon {
+    width: 83px;
+    height: 83px;
+    margin: 0 auto 17px;
+    display: grid;
+    place-items: center;
+    font-size: 42px;
+    border-radius: 25px;
+    background: linear-gradient(140deg, #367cff, #8755ed 60%, #27d8ce);
+    box-shadow:
+        0 0 25px #5487ff65,
+        0 0 65px #8c54ff35;
+    animation: shieldGlow 3s ease-in-out infinite;
+}
+
+@keyframes shieldGlow {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 0 25px #5487ff65, 0 0 65px #8c54ff35;
+    }
+    50% {
+        transform: translateY(-7px);
+        box-shadow: 0 0 35px #5487ff90, 0 0 80px #8c54ff55;
+    }
+}
+
+.brand h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 36px;
+    letter-spacing: -1.5px;
+}
+
+.brand h1 span {
+    background: linear-gradient(90deg, #39e6dc, #729aff, #b28aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.brand p {
+    color: #98a9c7;
+    font-size: 12px;
+    margin-top: 8px;
+    letter-spacing: .5px;
+}
+
+/* LOGIN CARD */
+
+.login-card {
+    position: relative;
+    overflow: hidden;
+    padding: 38px;
+    border-radius: 23px;
+    background: linear-gradient(145deg, #192744ed, #111b32f5);
+    border: 1px solid #829dff35;
+    box-shadow:
+        0 25px 80px #00000065,
+        0 0 35px #557bff12;
+    backdrop-filter: blur(22px);
+}
+
+.login-card::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -100px;
+    top: -110px;
+    background: #655bff35;
+    filter: blur(50px);
+    border-radius: 50%;
+}
+
+.card-heading {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.welcome-tag {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: #6487ff1c;
+    border: 1px solid #789aff30;
+    color: #a9bcff;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    font-weight: 800;
+    margin-bottom: 13px;
+}
+
+.card-heading h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 25px;
+    margin-bottom: 9px;
+}
+
+.card-heading p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* FORM */
+
+.input-group {
+    margin-bottom: 23px;
+}
+
+label {
+    display: block;
+    color: #e5eaff;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: .3px;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.field-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+}
+
+input {
+    width: 100%;
+    padding: 16px 16px 16px 46px;
+    background: #0a1429;
+    border: 1px solid #354969;
+    border-radius: 12px;
+    color: white;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    transition: .3s;
+}
+
+input:focus {
+    border-color: var(--cyan);
+    background: #101e38;
+    box-shadow: 0 0 0 4px #38e5dc18, 0 0 20px #38e5dc12;
+}
+
+input::placeholder {
+    color: #7586a4;
+}
+
+.password-input {
+    padding-right: 75px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: var(--cyan);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.toggle-password:hover {
+    color: white;
+}
+
+/* BUTTON */
+
+.login-button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(105deg, #397cff, #7659ec 60%, #27bfc6);
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .3px;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 0 8px 25px #547aff40;
+}
+
+.login-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px #547aff75;
+    filter: brightness(1.12);
+}
+
+.login-button:active {
+    transform: scale(.98);
+}
+
+/* ERROR MESSAGE */
+
+.message {
+    padding: 13px 15px;
+    margin-bottom: 20px;
+    border-radius: 11px;
+    background: #ff4f641c;
+    border: 1px solid #ff4f6450;
+    color: #ff9ba7;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* SECURITY */
+
+.security-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 24px;
+    padding: 14px;
+    background: linear-gradient(100deg, #21d8c010, #6287ff12);
+    border: 1px solid #42dccc35;
+    border-radius: 12px;
+    color: #a9ddd9;
+    font-size: 11px;
+}
+
+.security-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #42e7bb;
+    box-shadow: 0 0 10px #42e7bb;
+}
+
+.footer {
+    text-align: center;
+    color: #71819d;
+    font-size: 10px;
+    margin-top: 24px;
+    letter-spacing: .4px;
+}
+
+@media(max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .login-card {
+        padding: 27px 21px;
+    }
+
+    .brand h1 {
+        font-size: 30px;
+    }
+
+    .card-heading h2 {
+        font-size: 22px;
+    }
+
+    .brand-icon {
+        width: 72px;
+        height: 72px;
+        font-size: 35px;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="orb orb-one"></div>
+<div class="orb orb-two"></div>
+<div class="orb orb-three"></div>
+
+<div class="login-container">
+
+    <div class="brand">
+        <div class="brand-icon">🛡️</div>
+        <h1>Secure<span>Sight</span></h1>
+        <p>INTELLIGENT EMAIL THREAT DETECTION SYSTEM</p>
+    </div>
+
+    <div class="login-card">
+
+        <div class="card-heading">
+            <span class="welcome-tag">SECURE ACCESS PORTAL</span>
+            <h2>Welcome Back 👋</h2>
+            <p>Sign in to access your SecureSight security dashboard.</p>
+        </div>
+
+        {% for category, message in get_flashed_messages(with_categories=true) %}
+            <div class="message">
+                ⚠️ {{ message }}
+            </div>
+        {% endfor %}
+
+        <form method="POST" action="{{ url_for('login') }}">
+
+            <div class="input-group">
+                <label for="username">USERNAME</label>
+
+                <div class="input-wrapper">
+                    <span class="field-icon">👤</span>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">PASSWORD</label>
+
+                <div class="input-wrapper">
+                    <span class="field-icon">🔐</span>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="password-input"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="toggle-password"
+                        id="togglePassword"
+                        onclick="togglePasswordVisibility()"
+                    >SHOW</button>
+                </div>
+            </div>
+
+            <button type="submit" class="login-button">
+                Sign In &nbsp; → 
+            </button>
+
+        </form>
+
+        <div class="security-note">
+            <span class="security-dot"></span>
+            🔒 Protected Login · Secure Dashboard Access
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2026 SecureSight · Intelligent Email Security
+    </div>
+
+</div>
+
+<script>
+function togglePasswordVisibility() {
+    const password = document.getElementById("password");
+    const button = document.getElementById("togglePassword");
+
+    if (password.type === "password") {
+        password.type = "text";
+        button.textContent = "HIDE";
+    } else {
+        password.type = "password";
+        button.textContent = "SHOW";
+    }
+}
+</script>
+
+</body>
+</html>

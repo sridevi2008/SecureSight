@@ -1,0 +1,33 @@
+keyword,category,count
+urgent,Phishing,50
+urgent,Legitimate,0
+verify,Phishing,52
+verify,Legitimate,0
+password,Phishing,150
+password,Legitimate,0
+account,Phishing,251
+account,Legitimate,0
+login,Phishing,52
+login,Legitimate,0
+security,Phishing,50
+security,Legitimate,0
+bank,Phishing,1
+bank,Legitimate,0
+suspended,Phishing,1
+suspended,Legitimate,0
+click here,Phishing,2
+click here,Legitimate,0
+confirm,Phishing,52
+confirm,Legitimate,50
+update,Phishing,1
+update,Legitimate,147
+payment,Phishing,148
+payment,Legitimate,0
+immediately,Phishing,2
+immediately,Legitimate,0
+limited time,Phishing,0
+limited time,Legitimate,0
+validate,Phishing,0
+validate,Legitimate,0
+unlock,Phishing,1
+unlock,Legitimate,0

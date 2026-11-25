@@ -1,0 +1,3 @@
+category,emails,avg_email_length,avg_url_count,emails_with_urgent_language,emails_requesting_sensitive_info,emails_with_suspicious_url_indicators
+Phishing,250,124.32,0.99,52,53,3
+Legitimate,250,105.98,0.0,0,0,0

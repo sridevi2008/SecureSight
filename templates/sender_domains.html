@@ -1,0 +1,755 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sender Domains | SecureSight</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #080e20;
+            --panel: #111c35;
+            --text: #f5f7ff;
+            --muted: #8998b5;
+            --cyan: #24d6d0;
+            --blue: #5285ff;
+            --purple: #a16bff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background:
+                radial-gradient(circle at 80% 5%, rgba(82,133,255,.13), transparent 28%),
+                radial-gradient(circle at 15% 75%, rgba(161,107,255,.10), transparent 30%),
+                var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        /* SIDEBAR */
+
+        .sidebar {
+            width: 255px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(13,23,45,.94);
+            backdrop-filter: blur(18px);
+            border-right: 1px solid rgba(255,255,255,.07);
+            padding: 28px 18px;
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+            overflow-y: auto;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(90deg,#24d6d0,#5285ff,#a16bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 42px;
+            padding-left: 8px;
+        }
+
+        .menu-title {
+            color: #7183a5;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+            margin: 0 0 12px 10px;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            padding: 13px 15px;
+            margin: 5px 0;
+            color: #aab8d0;
+            text-decoration: none;
+            border-radius: 11px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: .3s ease;
+        }
+
+        .sidebar a span {
+            width: 20px;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background: linear-gradient(110deg,#356ee9,#7955d9);
+            color: white;
+            transform: translateX(4px);
+            box-shadow: 0 5px 18px rgba(82,133,255,.20);
+        }
+
+        .sidebar-bottom {
+            margin-top: auto;
+        }
+
+        .system-status {
+            padding: 13px;
+            background: rgba(36,214,208,.07);
+            border: 1px solid rgba(36,214,208,.15);
+            border-radius: 10px;
+            color: var(--cyan);
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        /* MAIN */
+
+        .main {
+            margin-left: 255px;
+            padding: 30px 38px;
+            min-height: 100vh;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 22px;
+            border-bottom: 1px solid rgba(255,255,255,.07);
+            margin-bottom: 35px;
+        }
+
+        .breadcrumb {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .breadcrumb span {
+            color: var(--cyan);
+            margin: 0 5px;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            color: #dce7f7;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        .avatar {
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg,var(--blue),var(--purple));
+            box-shadow: 0 4px 14px rgba(82,133,255,.25);
+        }
+
+        /* HEADING */
+
+        .page-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .eyebrow {
+            color: var(--cyan);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.7px;
+            margin-bottom: 11px;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin-top: 9px;
+            font-size: 13px;
+        }
+
+        .ready-badge {
+            padding: 10px 16px;
+            border-radius: 25px;
+            background: rgba(36,214,208,.08);
+            border: 1px solid rgba(36,214,208,.18);
+            color: var(--cyan);
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        /* SUMMARY CARDS */
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3,minmax(0,1fr));
+            gap: 19px;
+            margin-bottom: 25px;
+        }
+
+        .summary-card {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(145deg,#14213d,#101a30);
+            border: 1px solid rgba(255,255,255,.07);
+            border-radius: 17px;
+            padding: 23px;
+            transition: .3s ease;
+        }
+
+        .summary-card::after {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            right: -40px;
+            top: -45px;
+            background: rgba(82,133,255,.09);
+            border-radius: 50%;
+        }
+
+        .summary-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(82,133,255,.45);
+            box-shadow: 0 12px 25px rgba(0,0,0,.22);
+        }
+
+        .summary-icon {
+            width: 43px;
+            height: 43px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: rgba(82,133,255,.13);
+            font-size: 21px;
+            margin-bottom: 17px;
+        }
+
+        .summary-label {
+            color: #aab8d0;
+            font-size: 12px;
+        }
+
+        .summary-value {
+            font-family: 'Space Grotesk',sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            margin-top: 9px;
+            color: var(--cyan);
+        }
+
+        /* TABLE CARD */
+
+        .card {
+            background: linear-gradient(145deg,#14213d,#101a30);
+            padding: 25px;
+            border-radius: 18px;
+            border: 1px solid rgba(255,255,255,.07);
+            box-shadow: 0 10px 30px rgba(0,0,0,.13);
+        }
+
+        .card-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .card-heading h2 {
+            font-family: 'Space Grotesk',sans-serif;
+            font-size: 19px;
+            margin: 0;
+        }
+
+        .card-heading p {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 7px;
+        }
+
+        .search-box {
+            background: #0c162c;
+            border: 1px solid rgba(255,255,255,.10);
+            border-radius: 10px;
+            padding: 12px 15px;
+            color: white;
+            outline: none;
+            width: 250px;
+            font-family: inherit;
+            font-size: 12px;
+            transition: .3s;
+        }
+
+        .search-box:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(82,133,255,.10);
+        }
+
+        .search-box::placeholder {
+            color: #7183a5;
+        }
+
+        .table-wrap {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 550px;
+        }
+
+        th {
+            padding: 16px;
+            text-align: left;
+            background: rgba(82,133,255,.09);
+            color: var(--cyan);
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        td {
+            padding: 17px 16px;
+            color: #d3deef;
+            font-size: 13px;
+            border-bottom: 1px solid rgba(255,255,255,.05);
+        }
+
+        tbody tr {
+            transition: .2s;
+        }
+
+        tbody tr:hover {
+            background: rgba(82,133,255,.06);
+        }
+
+        .serial {
+            color: #8293ae;
+            font-weight: 600;
+        }
+
+        .domain {
+            color: #eaf1fc;
+            font-weight: 600;
+        }
+
+        .domain-icon {
+            display: inline-grid;
+            place-items: center;
+            width: 32px;
+            height: 32px;
+            background: rgba(82,133,255,.13);
+            color: var(--cyan);
+            border-radius: 9px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .count {
+            display: inline-block;
+            background: rgba(36,214,208,.10);
+            color: var(--cyan);
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 11px;
+        }
+
+        .empty {
+            text-align: center;
+            padding: 40px;
+            color: var(--muted);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 35px 0 10px;
+            color: #7183a5;
+            font-size: 11px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:1100px) {
+            .sidebar {
+                width: 220px;
+            }
+
+            .main {
+                margin-left: 220px;
+                padding: 25px;
+            }
+
+            .summary-grid {
+                grid-template-columns: repeat(2,minmax(0,1fr));
+            }
+        }
+
+        @media(max-width:700px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 20px;
+            }
+
+            .logo {
+                margin-bottom: 20px;
+            }
+
+            .sidebar-bottom {
+                margin-top: 15px;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .topbar {
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+        }
+
+        @media(max-width:450px) {
+            .main {
+                padding: 16px;
+            }
+
+            .card {
+                padding: 17px;
+            }
+
+            .topbar {
+                flex-direction: column;
+            }
+
+            .page-heading {
+                align-items: flex-start;
+            }
+        }
+    
+/* SECURESIGHT UNIFIED SIDEBAR TYPOGRAPHY */
+.sidebar .logo,
+.sidebar .brand,
+.sidebar .side-brand {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+
+.sidebar .nav-title,
+.sidebar .menu-label {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+}
+
+.sidebar a,
+.sidebar .nav-link {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.sidebar a span,
+.sidebar .nav-link span {
+    font-size: 17px !important;
+}
+
+.sidebar .sidebar-status {
+    font-size: 12px !important;
+}
+/* END UNIFIED SIDEBAR TYPOGRAPHY */
+
+
+/* STANDARD SIDEBAR FONT SIZES */
+.logo, .brand.side-brand {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+.nav-title, .menu-label {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+}
+.sidebar a, .nav-link {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+.sidebar a span, .nav-link span {
+    font-size: 17px !important;
+}
+
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">🛡️ SecureSight</div>
+
+        <p class="menu-title">MAIN MENU</p>
+
+        <a href="{{ url_for('dashboard') }}"
+           class="{% if request.endpoint == 'dashboard' %}active{% endif %}">
+            <span><i class="fa-solid fa-gauge"></i></span> Overview
+        </a>
+
+        <a href="{{ url_for('visual_analytics') }}"
+           class="{% if request.endpoint == 'visual_analytics' %}active{% endif %}">
+            <span>◉</span> Visual Analytics
+        </a>
+
+        <a href="{{ url_for('sender_domains') }}"
+           class="{% if request.endpoint == 'sender_domains' %}active{% endif %}">
+            <span><i class="fa-solid fa-globe"></i></span> Sender Domains
+        </a>
+
+        <a href="{{ url_for('email_records') }}"
+           class="{% if request.endpoint == 'email_records' %}active{% endif %}">
+            <span><i class="fa-solid fa-envelope-open-text"></i></span> Email Records
+        </a>
+
+        <a href="{{ url_for('predict_email') }}"
+           class="{% if request.endpoint == 'predict_email' %}active{% endif %}">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span> Email Prediction
+        </a>
+
+        <a href="{{ url_for('download_reports') }}">
+            <span>⇩</span> Download Reports
+        </a>
+
+        <a href="{{ url_for('about') }}"
+           class="{% if request.endpoint == 'about' %}active{% endif %}">
+            <span><i class="fa-solid fa-circle-info"></i></span> About Project
+        </a>
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">● System Online</div>
+
+            <a href="{{ url_for('logout') }}">
+                <span><i class="fa-solid fa-right-from-bracket"></i></span> Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div class="breadcrumb">
+                Workspace <span>/</span> Sender Domains
+            </div>
+
+            <div class="user">
+                <div class="avatar">👤</div>
+                <span>{{ username }}</span>
+            </div>
+
+        </header>
+
+        <!-- PAGE HEADING -->
+
+        <section class="page-heading">
+
+            <div>
+                <div class="eyebrow">EMAIL SOURCE INTELLIGENCE</div>
+
+                <h1>Sender Domains</h1>
+
+                <p class="subtitle">
+                    Explore and monitor sender domains identified in your email dataset.
+                </p>
+            </div>
+
+            <div class="ready-badge">● Data Available</div>
+
+        </section>
+
+        <!-- SUMMARY CARDS -->
+
+        <section class="summary-grid">
+
+            <div class="summary-card">
+                <div class="summary-icon">🌐</div>
+                <div class="summary-label">Total Sender Domains</div>
+                <div class="summary-value">{{ domains|length }}</div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">📩</div>
+                <div class="summary-label">Total Emails in Listed Domains</div>
+                <div class="summary-value">
+                    {{ domains|sum(attribute='count') }}
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">🔍</div>
+                <div class="summary-label">Domain Monitoring</div>
+                <div class="summary-value" style="font-size:23px;">
+                    Active
+                </div>
+            </div>
+
+        </section>
+
+        <!-- DOMAIN TABLE -->
+
+        <section class="card">
+
+            <div class="card-heading">
+
+                <div>
+                    <h2>🌐 Domain Directory</h2>
+                    <p>Sender domains identified in your email dataset</p>
+                </div>
+
+                <input
+                    type="text"
+                    id="domainSearch"
+                    class="search-box"
+                    placeholder="🔍 Search domain..."
+                    onkeyup="searchDomains()"
+                >
+
+            </div>
+
+            <div class="table-wrap">
+
+                <table id="domainTable">
+
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Sender Domain</th>
+                            <th>Total Emails</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        {% for domain in domains %}
+
+                        <tr>
+
+                            <td class="serial">
+                                {{ loop.index }}
+                            </td>
+
+                            <td class="domain">
+                                <span class="domain-icon">🌐</span>
+                                {{ domain.domain }}
+                            </td>
+
+                            <td>
+                                <span class="count">
+                                    {{ domain.count }}
+                                </span>
+                            </td>
+
+                        </tr>
+
+                        {% else %}
+
+                        <tr>
+                            <td colspan="3" class="empty">
+                                No sender domain information available.
+                            </td>
+                        </tr>
+
+                        {% endfor %}
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            © 2026 SecureSight | Email Phishing Detection System
+        </footer>
+
+    </main>
+
+    <!-- SEARCH FUNCTION -->
+
+    <script>
+        function searchDomains() {
+
+            const input = document.getElementById("domainSearch");
+            const filter = input.value.toLowerCase();
+
+            const table = document.getElementById("domainTable");
+            const rows = table.getElementsByTagName("tr");
+
+            for (let i = 1; i < rows.length; i++) {
+
+                const domainCell = rows[i].getElementsByTagName("td")[1];
+
+                if (domainCell) {
+
+                    const text = domainCell.textContent || domainCell.innerText;
+
+                    rows[i].style.display =
+                        text.toLowerCase().includes(filter) ? "" : "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+

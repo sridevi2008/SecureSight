@@ -1,0 +1,811 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visual Analytics | SecureSight</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #080e20;
+    --panel: #111c35;
+    --panel-light: #14213d;
+    --text: #f5f7ff;
+    --muted: #8998b5;
+    --cyan: #24d6d0;
+    --blue: #5285ff;
+    --purple: #a16bff;
+    --border: rgba(255,255,255,.09);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans',sans-serif;
+    background:
+        radial-gradient(ellipse at 10% 5%,rgba(82,133,255,.13),transparent 35%),
+        radial-gradient(ellipse at 90% 15%,rgba(161,107,255,.12),transparent 35%),
+        radial-gradient(ellipse at 50% 100%,rgba(36,214,208,.07),transparent 40%),
+        var(--bg);
+    color: var(--text);
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 255px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(13,23,45,.94);
+    border-right: 1px solid var(--border);
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    overflow-y: auto;
+    backdrop-filter: blur(20px);
+}
+
+.logo {
+    font-family: 'Space Grotesk',sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    background: linear-gradient(90deg,var(--cyan),var(--blue),var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+    padding-left: 8px;
+}
+
+.menu-title {
+    color: #7385a3;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin: 0 0 12px 10px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 15px;
+    margin: 5px 0;
+    color: #aab8d0;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: linear-gradient(110deg,#356ee9,#7955d9);
+    color: white;
+    transform: translateX(4px);
+}
+
+.sidebar a span {
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.system-status {
+    padding: 13px;
+    background: rgba(36,214,208,.08);
+    border: 1px solid rgba(36,214,208,.12);
+    border-radius: 10px;
+    color: var(--cyan);
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+/* MAIN CONTENT */
+
+.main {
+    margin-left: 255px;
+    padding: 30px 38px;
+    min-height: 100vh;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+}
+
+.breadcrumb {
+    color: #91a2bd;
+    font-size: 13px;
+}
+
+.breadcrumb span {
+    color: var(--cyan);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #dce7f7;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg,var(--blue),var(--purple));
+    box-shadow: 0 0 15px rgba(82,133,255,.25);
+}
+
+/* PAGE HEADING */
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    color: var(--cyan);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Space Grotesk',sans-serif;
+    font-size: 31px;
+    margin: 0;
+    letter-spacing: -.5px;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin-top: 9px;
+    font-size: 14px;
+}
+
+.ready-badge {
+    padding: 10px 16px;
+    border-radius: 25px;
+    background: rgba(36,214,208,.10);
+    border: 1px solid rgba(36,214,208,.25);
+    color: var(--cyan);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.ready-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--cyan);
+    margin-right: 7px;
+    box-shadow: 0 0 9px var(--cyan);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: .4;
+    }
+}
+
+/* STATISTICS */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.stat-card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg,#14213d,#101a30);
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    padding: 21px;
+    transition: .3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+.stat-card::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: -35px;
+    top: -35px;
+    border-radius: 50%;
+    background: rgba(82,133,255,.08);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(82,133,255,.55);
+    box-shadow: 0 12px 30px rgba(82,133,255,.12);
+}
+
+.stat-icon {
+    font-size: 25px;
+    margin-bottom: 13px;
+}
+
+.stat-label {
+    color: #aab8d0;
+    font-size: 13px;
+}
+
+.stat-value {
+    font-family: 'Space Grotesk',sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 8px 0;
+}
+
+.stat-note {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* INFORMATION CARDS */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    padding: 20px;
+    background: linear-gradient(145deg,#14213d,#101a30);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: .3s;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(82,133,255,.5);
+}
+
+.info-icon {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.info-card h3 {
+    margin: 0;
+    font-family: 'Space Grotesk',sans-serif;
+    font-size: 15px;
+}
+
+.info-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* SECTION */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.section-heading h2 {
+    font-family: 'Space Grotesk',sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 6px 0 0;
+}
+
+/* CHARTS */
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 22px;
+}
+
+.chart-card {
+    background: linear-gradient(145deg,#14213d,#101a30);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px;
+    min-width: 0;
+    transition: .3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.chart-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(82,133,255,.55);
+    box-shadow: 0 15px 30px rgba(82,133,255,.10);
+}
+
+.chart-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.chart-number {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: linear-gradient(135deg,rgba(82,133,255,.2),rgba(161,107,255,.2));
+    border: 1px solid rgba(82,133,255,.2);
+    color: #8eb0ff;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.chart-card h3 {
+    font-family: 'Space Grotesk',sans-serif;
+    font-size: 15px;
+    margin: 0;
+    color: #eaf1fc;
+}
+
+.chart-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 11px;
+    padding: 8px;
+    display: block;
+}
+
+.chart-caption {
+    color: #8293ae;
+    font-size: 12px;
+    margin: 12px 0 0;
+}
+
+/* EMPTY STATE */
+
+.empty {
+    color: var(--muted);
+    padding: 55px 20px;
+    text-align: center;
+    background: linear-gradient(145deg,#14213d,#101a30);
+    border: 1px dashed rgba(255,255,255,.15);
+    border-radius: 18px;
+}
+
+.empty-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.empty h3 {
+    color: var(--text);
+    font-family: 'Space Grotesk',sans-serif;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 35px 0 10px;
+    color: #71839f;
+    font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .main {
+        margin-left: 220px;
+        padding: 25px;
+    }
+
+    .stats-grid,
+    .info-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .chart-grid,
+    .stats-grid,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topbar {
+        gap: 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media(max-width:450px) {
+    .main {
+        padding: 15px;
+    }
+
+    .chart-card {
+        padding: 14px;
+    }
+
+    .chart-card img {
+        height: 220px;
+    }
+}
+
+/* SECURESIGHT UNIFIED SIDEBAR TYPOGRAPHY */
+.sidebar .logo,
+.sidebar .brand,
+.sidebar .side-brand {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+
+.sidebar .nav-title,
+.sidebar .menu-label {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+}
+
+.sidebar a,
+.sidebar .nav-link {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.sidebar a span,
+.sidebar .nav-link span {
+    font-size: 17px !important;
+}
+
+.sidebar .sidebar-status {
+    font-size: 12px !important;
+}
+/* END UNIFIED SIDEBAR TYPOGRAPHY */
+
+
+/* STANDARD SIDEBAR FONT SIZES */
+.logo, .brand.side-brand {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+.nav-title, .menu-label {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+}
+.sidebar a, .nav-link {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+.sidebar a span, .nav-link span {
+    font-size: 17px !important;
+}
+
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">🛡️ SecureSight</div>
+
+    <p class="menu-title">MAIN MENU</p>
+
+    <a href="{{ url_for('dashboard') }}"
+       class="{% if request.endpoint == 'dashboard' %}active{% endif %}">
+       <span><i class="fa-solid fa-gauge"></i></span> Overview
+    </a>
+
+    <a href="{{ url_for('visual_analytics') }}"
+       class="{% if request.endpoint == 'visual_analytics' %}active{% endif %}">
+       <span>◉</span> Visual Analytics
+    </a>
+
+    <a href="{{ url_for('sender_domains') }}"
+       class="{% if request.endpoint == 'sender_domains' %}active{% endif %}">
+       <span><i class="fa-solid fa-globe"></i></span> Sender Domains
+    </a>
+
+    <a href="{{ url_for('email_records') }}"
+       class="{% if request.endpoint == 'email_records' %}active{% endif %}">
+       <span><i class="fa-solid fa-envelope-open-text"></i></span> Email Records
+    </a>
+
+    <a href="{{ url_for('predict_email') }}"
+       class="{% if request.endpoint == 'predict_email' %}active{% endif %}">
+       <span><i class="fa-solid fa-magnifying-glass"></i></span> Email Prediction
+    </a>
+
+    <a href="{{ url_for('download_reports') }}">
+       <span>⇩</span> Download Reports
+    </a>
+
+    <a href="{{ url_for('about') }}"
+       class="{% if request.endpoint == 'about' %}active{% endif %}">
+       <span><i class="fa-solid fa-circle-info"></i></span> About Project
+    </a>
+
+    <div class="sidebar-bottom">
+
+        <div class="system-status">
+            ● System Online
+        </div>
+
+        <a href="{{ url_for('logout') }}">
+            <span><i class="fa-solid fa-right-from-bracket"></i></span> Logout
+        </a>
+
+    </div>
+
+</aside>
+
+<main class="main">
+
+    <header class="topbar">
+
+        <div class="breadcrumb">
+            Workspace <span>/</span> Visual Analytics
+        </div>
+
+        <div class="user">
+            <div class="avatar">👤</div>
+            <span>{{ username }}</span>
+        </div>
+
+    </header>
+
+    <section class="page-heading">
+
+        <div>
+            <div class="eyebrow">SECURITY INTELLIGENCE CENTER</div>
+
+            <h1>Visual Analytics</h1>
+
+            <p class="subtitle">
+                Explore phishing patterns through visual reports.
+            </p>
+        </div>
+
+        <div class="ready-badge">
+            <span class="ready-dot"></span> Analysis Ready
+        </div>
+
+    </section>
+
+    <section class="stats-grid">
+
+        <div class="stat-card">
+
+            <div class="stat-icon">📩</div>
+
+            <div class="stat-label">Total Email Dataset</div>
+
+            <div class="stat-value">
+                {{ data.total }}
+            </div>
+
+            <div class="stat-note">
+                Dataset records
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">🚨</div>
+
+            <div class="stat-label">Phishing Detection</div>
+
+            <div class="stat-value" style="color:#ff7585;">
+                {{ data.phishing }}
+            </div>
+
+            <div class="stat-note">
+                Phishing records
+            </div>
+
+        </div>
+
+        <div class="stat-card">
+
+            <div class="stat-icon">✅</div>
+
+            <div class="stat-label">Legitimate Emails</div>
+
+            <div class="stat-value" style="color:#24d6d0;">
+                {{ data.legitimate }}
+            </div>
+
+            <div class="stat-note">
+                Legitimate records
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="info-grid">
+
+        <div class="info-card">
+
+            <div class="info-icon">📊</div>
+
+            <h3>Email Analysis</h3>
+
+            <p>
+                Visual overview of analyzed email data.
+            </p>
+
+        </div>
+
+        <div class="info-card">
+
+            <div class="info-icon">🚨</div>
+
+            <h3>Threat Detection</h3>
+
+            <p>
+                Identify suspicious patterns and phishing activity.
+            </p>
+
+        </div>
+
+        <div class="info-card">
+
+            <div class="info-icon">🔍</div>
+
+            <h3>Pattern Monitoring</h3>
+
+            <p>
+                Study URLs, keywords and sender domain patterns.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <div class="section-heading">
+
+            <div>
+                <h2>📈 Analytics Reports</h2>
+
+                <p>
+                    Generated charts from your email analysis
+                </p>
+            </div>
+
+        </div>
+
+        {% if data.charts %}
+
+            <div class="chart-grid">
+
+               {% for chart in data.charts %}
+
+                <div class="chart-card">
+
+                    <div class="chart-title-row">
+
+                        <div class="chart-number">
+                            {{ loop.index }}
+                        </div>
+
+                        <h3>{{ chart.title }}</h3>
+
+                    </div>
+
+                    <img
+                        src="{{ url_for('graph_file', filename=chart.file) }}"
+                        alt="{{ chart.title }}"
+                        loading="lazy"
+                    >
+
+                    <p class="chart-caption">
+                        SecureSight email security visualization
+                    </p>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% else %}
+
+            <div class="empty">
+
+                <div class="empty-icon">📊</div>
+
+                <h3>No Charts Available</h3>
+
+                <p>
+                    Run your Python analysis first to generate charts.
+                </p>
+
+            </div>
+
+        {% endif %}
+
+    </section>
+
+    <footer class="footer">
+        © 2026 SecureSight | Email Phishing Detection System
+    </footer>
+
+</main>
+
+</body>
+</html>
+

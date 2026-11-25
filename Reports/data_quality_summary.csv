@@ -1,0 +1,2 @@
+rows_loaded,duplicate_records_removed,empty_subject_records,empty_body_records,rows_after_duplicate_removal,unknown_labels
+500,0,0,0,500,0

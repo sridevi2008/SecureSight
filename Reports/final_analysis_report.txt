@@ -1,0 +1,26 @@
+PHISHING EMAIL DETECTION AND ANALYSIS USING PYTHON
+================================================
+Dataset rows loaded: 500
+Rows after duplicate removal: 500
+Phishing emails: 250
+Legitimate emails: 250
+Unknown labels: 0
+
+Top frequently used words:
+sample (686), your (304), account (251), https (246), example (245), test (245), the (200), verification (197), this (197), review (196)
+
+Top sender domains:
+company.test (149), account.test (99), shop.test (50), service.test (50), library.test (50), bank.test (49), payment.test (49), example-bank.test (1), unknown.test (1), museum.test (1)
+
+URL summary:
+ emails_with_urls  emails_with_multiple_urls  total_extracted_urls  urls_using_ip_addresses  known_shortened_urls
+              248                          0                   248                        2                     1
+
+Keyword comparison file: suspicious_keyword_comparison.csv
+URL details file: extracted_urls.csv
+Sender analysis file: sender_domain_analysis.csv
+
+IMPORTANT:
+A suspicious-looking URL or keyword is an indicator for manual review,
+not proof that a website or email is malicious. Do not open suspicious links.
+This project performs data analytics; it does not guarantee a security verdict.

@@ -1,0 +1,792 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | SecureSight</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #080e20;
+    --panel: #111c35;
+    --text: #f5f7ff;
+    --muted: #8998b5;
+    --cyan: #24d6d0;
+    --blue: #5285ff;
+    --purple: #a16bff;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background:
+        radial-gradient(ellipse at 80% 5%, #263b8033, transparent 35%),
+        radial-gradient(ellipse at 20% 90%, #0a9eaa18, transparent 35%),
+        var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND GLOW */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(110px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::before {
+    background: #356cff;
+    opacity: .12;
+    top: -120px;
+    right: -80px;
+}
+
+body::after {
+    background: #a14aff;
+    opacity: .10;
+    bottom: -120px;
+    left: -80px;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 255px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px 18px;
+    background: rgba(13, 23, 45, 0.94);
+    border-right: 1px solid #ffffff12;
+    backdrop-filter: blur(20px);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 48px;
+    padding-left: 9px;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    background: linear-gradient(90deg, #24d6d0, #7296ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav-title {
+    font-size: 10px;
+    color: #647491;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin: 10px 12px 13px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 14px;
+    margin: 5px 0;
+    color: #9cabc6;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.sidebar a span {
+    width: 20px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.sidebar a:hover {
+    background: #ffffff0b;
+    color: white;
+    transform: translateX(5px);
+}
+
+.sidebar a.active {
+    color: white;
+    background: linear-gradient(110deg, #356ee9, #7955d9);
+    box-shadow: 0 7px 25px #526aff45;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+/* MAIN */
+
+.main {
+    margin-left: 255px;
+    padding: 38px 45px;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 31px;
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.user {
+    padding: 11px 18px;
+    border-radius: 30px;
+    background: #172440;
+    border: 1px solid #ffffff15;
+    color: #dce7ff;
+    font-size: 12px;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 38px;
+    border-radius: 20px;
+    background: linear-gradient(115deg, #172e58, #28265a 55%, #123d54);
+    border: 1px solid #7397ff30;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 45px #00000025;
+    animation: appear .7s ease;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    right: 8%;
+    top: -120px;
+    border-radius: 50%;
+    background: #58a5ff20;
+    filter: blur(10px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    background: #24d6d01c;
+    color: #61e9df;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.hero h2 span {
+    background: linear-gradient(90deg, #24d6d0, #7296ff, #b28aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: #b4c6e4;
+    font-size: 13px;
+    line-height: 1.9;
+    max-width: 700px;
+}
+
+.shield {
+    position: relative;
+    z-index: 1;
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    border-radius: 25px;
+    font-size: 43px;
+    background: linear-gradient(145deg, #ffffff20, #ffffff08);
+    border: 1px solid #ffffff30;
+    box-shadow: 0 0 35px #48a6ff35;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SECTION */
+
+.section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 21px;
+    margin: 35px 0 19px;
+}
+
+.section-title span {
+    background: linear-gradient(90deg, #24d6d0, #7296ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* OVERVIEW GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #14213d, #101a30);
+    border: 1px solid #ffffff12;
+    border-radius: 19px;
+    padding: 25px;
+    box-shadow: 0 12px 35px #00000020;
+    transition: .3s;
+    animation: appear .7s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #5285ff70;
+    box-shadow: 0 15px 35px #5285ff18;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #246ce9, #8b59e9);
+    border-radius: 14px;
+    font-size: 23px;
+    margin-bottom: 18px;
+    box-shadow: 0 5px 18px #5575f844;
+}
+
+.card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    margin-bottom: 11px;
+}
+
+.card p {
+    font-size: 12px;
+    color: #9eafc7;
+    line-height: 1.9;
+}
+
+/* TECHNOLOGIES */
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.tech {
+    text-align: center;
+    padding: 23px 12px;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #14213d, #101a30);
+    border: 1px solid #ffffff12;
+    transition: .3s;
+}
+
+.tech:hover {
+    transform: translateY(-5px);
+    border-color: #24d6d0;
+    box-shadow: 0 10px 25px #24d6d015;
+}
+
+.tech .symbol {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.tech h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    color: #61e9df;
+}
+
+.tech p {
+    color: #8998b5;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+/* WORKFLOW */
+
+.workflow {
+    background: linear-gradient(145deg, #14213d, #101a30);
+    border-radius: 19px;
+    padding: 25px;
+    border: 1px solid #ffffff12;
+    box-shadow: 0 12px 35px #00000020;
+}
+
+.step {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 17px 5px;
+    border-bottom: 1px solid #ffffff10;
+}
+
+.step:last-child {
+    border-bottom: none;
+}
+
+.step-number {
+    min-width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #356ee9, #7955d9);
+    color: white;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    box-shadow: 0 5px 15px #526aff35;
+}
+
+.step h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.step p {
+    font-size: 12px;
+    color: #9eafc7;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    color: #71819d;
+    padding: 35px 10px 15px;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+.footer span {
+    background: linear-gradient(90deg, #24d6d0, #7296ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1100px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media(max-width: 850px) {
+    .sidebar {
+        width: 210px;
+    }
+
+    .main {
+        margin-left: 210px;
+        padding: 28px 23px;
+    }
+}
+
+@media(max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 20px 13px;
+    }
+
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .hero {
+        padding: 23px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .shield {
+        width: 60px;
+        height: 60px;
+        font-size: 29px;
+    }
+
+    .grid,
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 22px;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="logo">🛡 Secure<span>Sight</span></div>
+
+    <div class="nav-title">MAIN MENU</div>
+
+    <a href="{{ url_for('dashboard') }}"
+       class="{% if request.endpoint == 'dashboard' %}active{% endif %}">
+        <span>▦</span> Overview
+    </a>
+
+    <a href="{{ url_for('visual_analytics') }}"
+       class="{% if request.endpoint == 'visual_analytics' %}active{% endif %}">
+        <span>◉</span> Visual Analytics
+    </a>
+
+    <a href="{{ url_for('sender_domains') }}"
+       class="{% if request.endpoint == 'sender_domains' %}active{% endif %}">
+        <span>◎</span> Sender Domains
+    </a>
+
+    <a href="{{ url_for('email_records') }}"
+       class="{% if request.endpoint == 'email_records' %}active{% endif %}">
+        <span>▤</span> Email Records
+    </a>
+
+    <a href="{{ url_for('predict_email') }}"
+       class="{% if request.endpoint == 'predict_email' %}active{% endif %}">
+        <span>⌕</span> Email Prediction
+    </a>
+
+    <a href="{{ url_for('download_reports') }}">
+        <span>⇩</span> Download Reports
+    </a>
+
+    <a href="{{ url_for('about') }}"
+       class="{% if request.endpoint == 'about' %}active{% endif %}">
+        <span>ⓘ</span> About Project
+    </a>
+
+    <div class="sidebar-bottom">
+        <div class="nav-title">ACCOUNT</div>
+
+        <a href="{{ url_for('logout') }}">
+            <span>⇥</span> Logout
+        </a>
+    </div>
+
+</aside>
+
+<main class="main">
+
+    <div class="header">
+        <div>
+            <h1>About SecureSight</h1>
+            <p class="subtitle">Learn more about our intelligent email security system</p>
+        </div>
+
+        <div class="user">👤 {{ session.username }}</div>
+    </div>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="hero-label">🛡 EMAIL SECURITY & ANALYSIS</span>
+
+            <h2>Welcome to <span>SecureSight</span></h2>
+
+            <p>
+                SecureSight is a phishing email analysis system designed
+                to identify potentially malicious and legitimate emails
+                using machine learning techniques. It analyzes email
+                content and provides useful insights through an
+                interactive dashboard and visual analytics.
+            </p>
+
+        </div>
+
+        <div class="shield">🛡️</div>
+
+    </section>
+
+    <h2 class="section-title">Overview</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="card-icon">🎯</div>
+            <h3>Project Objective</h3>
+            <p>
+                To identify suspicious emails and help users
+                understand potential phishing threats through
+                automated email analysis.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🧠</div>
+            <h3>Machine Learning</h3>
+            <p>
+                Uses a trained machine learning model to classify
+                submitted email content based on patterns learned
+                from its training data.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📊</div>
+            <h3>Data Visualization</h3>
+            <p>
+                Presents email statistics, suspicious keywords,
+                sender domain information and analysis charts
+                through a visual dashboard.
+            </p>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">Technologies <span>Used</span></h2>
+
+    <div class="tech-grid">
+
+        <div class="tech">
+            <div class="symbol">🐍</div>
+            <h3>Python</h3>
+            <p>Programming Language</p>
+        </div>
+
+        <div class="tech">
+            <div class="symbol">🌐</div>
+            <h3>Flask</h3>
+            <p>Web Framework</p>
+        </div>
+
+        <div class="tech">
+            <div class="symbol">🤖</div>
+            <h3>Machine Learning</h3>
+            <p>Email Classification</p>
+        </div>
+
+        <div class="tech">
+            <div class="symbol">📈</div>
+            <h3>Pandas</h3>
+            <p>Data Processing</p>
+        </div>
+
+        <div class="tech">
+            <div class="symbol">🎨</div>
+            <h3>HTML & CSS</h3>
+            <p>Frontend Design</p>
+        </div>
+
+        <div class="tech">
+            <div class="symbol">⚡</div>
+            <h3>JavaScript</h3>
+            <p>Interactive Interface</p>
+        </div>
+
+        <div class="tech">
+            <div class="symbol">📉</div>
+            <h3>Matplotlib</h3>
+            <p>Data Visualization</p>
+        </div>
+
+        <div class="tech">
+            <div class="symbol">💾</div>
+            <h3>CSV Dataset</h3>
+            <p>Email Data Storage</p>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">Key <span>Features</span></h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="card-icon">📩</div>
+            <h3>Email Prediction</h3>
+            <p>Submit email subject and body to receive a model-based classification result.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📊</div>
+            <h3>Visual Analytics</h3>
+            <p>Explore charts showing phishing patterns and email dataset statistics.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🌍</div>
+            <h3>Sender Domain Analysis</h3>
+            <p>View sender domain frequency and domain-related dataset insights.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📋</div>
+            <h3>Email Records</h3>
+            <p>Browse stored email records and search for specific sender or subject details.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">📥</div>
+            <h3>Report Download</h3>
+            <p>Download email records as a CSV report for further analysis.</p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🔐</div>
+            <h3>Secure Login</h3>
+            <p>Access the project dashboard through a login-protected interface.</p>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">How the System <span>Works</span></h2>
+
+    <div class="workflow">
+
+        <div class="step">
+            <div class="step-number">01</div>
+            <div>
+                <h3>Email Input</h3>
+                <p>The user enters an email subject and email body into the prediction page.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">02</div>
+            <div>
+                <h3>Text Processing</h3>
+                <p>The email content is passed to the trained machine learning pipeline.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">03</div>
+            <div>
+                <h3>Model Prediction</h3>
+                <p>The model analyzes the submitted text and predicts its learned email category.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-number">04</div>
+            <div>
+                <h3>Result Display</h3>
+                <p>The predicted result is displayed to the user through the application.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>🛡 <span>SecureSight</span> — Phishing Email Analysis System</p>
+        <p style="margin-top:8px;">Academic Project | Built with Python & Machine Learning</p>
+    </div>
+
+</main>
+
+</body>
+</html>
+```

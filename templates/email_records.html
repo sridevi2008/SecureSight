@@ -1,0 +1,1050 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Email Records | SecureSight</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #080e20;
+    --panel: #111c35;
+    --text: #f5f7ff;
+    --muted: #8998b5;
+    --cyan: #24d6d0;
+    --blue: #5285ff;
+    --purple: #a16bff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background:
+        radial-gradient(circle at 80% 5%, rgba(82,133,255,.13), transparent 28%),
+        radial-gradient(circle at 15% 75%, rgba(161,107,255,.10), transparent 30%),
+        var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 255px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(13,23,45,.94);
+    backdrop-filter: blur(18px);
+    border-right: 1px solid rgba(255,255,255,.07);
+    padding: 28px 18px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(90deg,#24d6d0,#5285ff,#a16bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 42px;
+    padding-left: 8px;
+}
+
+.logo span {
+    color: white;
+}
+
+.nav-title {
+    color: #7183a5;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    margin: 0 0 12px 10px;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 15px;
+    margin: 5px 0;
+    color: #aab8d0;
+    text-decoration: none;
+    border-radius: 11px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.sidebar a span {
+    width: 20px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: linear-gradient(110deg,#356ee9,#7955d9);
+    color: white;
+    transform: translateX(4px);
+    box-shadow: 0 5px 18px rgba(82,133,255,.20);
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.system-status {
+    padding: 13px;
+    background: rgba(36,214,208,.07);
+    border: 1px solid rgba(36,214,208,.15);
+    border-radius: 10px;
+    color: var(--cyan);
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+/* MAIN */
+
+.main {
+    margin-left: 255px;
+    padding: 30px 38px;
+    min-height: 100vh;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    margin-bottom: 35px;
+}
+
+.breadcrumb {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.breadcrumb span {
+    color: var(--cyan);
+    margin: 0 5px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #dce7f7;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.avatar {
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg,var(--blue),var(--purple));
+    box-shadow: 0 4px 14px rgba(82,133,255,.25);
+}
+
+/* HEADING */
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.eyebrow {
+    color: var(--cyan);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    margin-bottom: 11px;
+}
+
+h1, h2 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin-top: 9px;
+    font-size: 13px;
+}
+
+.ready-badge {
+    padding: 10px 16px;
+    border-radius: 25px;
+    background: rgba(36,214,208,.08);
+    border: 1px solid rgba(36,214,208,.18);
+    color: var(--cyan);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* STATS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 19px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg,#14213d,#101a30);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 17px;
+    padding: 23px;
+    transition: .3s ease;
+}
+
+.stat-card::after {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    right: -38px;
+    top: -42px;
+    background: rgba(82,133,255,.08);
+    border-radius: 50%;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(82,133,255,.45);
+    box-shadow: 0 12px 25px rgba(0,0,0,.22);
+}
+
+.stat-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: rgba(82,133,255,.13);
+    font-size: 21px;
+    margin-bottom: 17px;
+}
+
+.stat-card p {
+    color: #aab8d0;
+    font-size: 12px;
+}
+
+.stat-card h2 {
+    font-size: 30px;
+    color: var(--cyan);
+    margin-top: 9px;
+}
+
+/* TABLE */
+
+.table-card {
+    background: linear-gradient(145deg,#14213d,#101a30);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.13);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.table-header h2 {
+    font-size: 19px;
+}
+
+.table-header p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.search-box,
+.filter-select {
+    background: #0c162c;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 10px;
+    padding: 12px 14px;
+    color: white;
+    outline: none;
+    font-family: inherit;
+    font-size: 12px;
+    transition: .3s;
+}
+
+.search-box {
+    width: 240px;
+}
+
+.search-box::placeholder {
+    color: #7183a5;
+}
+
+.search-box:focus,
+.filter-select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(82,133,255,.10);
+}
+
+.filter-select {
+    cursor: pointer;
+}
+
+.filter-select option {
+    background: #111c35;
+    color: white;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    background: linear-gradient(110deg,#356ee9,#7955d9);
+    color: white;
+    padding: 12px 17px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(82,133,255,.22);
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th {
+    text-align: left;
+    color: var(--cyan);
+    background: rgba(82,133,255,.09);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px 13px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+td {
+    padding: 17px 13px;
+    font-size: 13px;
+    color: #d6deeb;
+    border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+tbody tr {
+    transition: .2s;
+}
+
+tbody tr:hover {
+    background: rgba(82,133,255,.06);
+}
+
+.serial {
+    color: #8293ae;
+    font-weight: 600;
+}
+
+.sender {
+    color: #eaf1fc;
+    font-weight: 600;
+}
+
+.subject {
+    max-width: 300px;
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.phishing {
+    background: rgba(255,80,100,.13);
+    color: #ff7185;
+    border: 1px solid rgba(255,80,100,.25);
+}
+
+.legitimate {
+    background: rgba(36,214,208,.10);
+    color: var(--cyan);
+    border: 1px solid rgba(36,214,208,.22);
+}
+
+.unknown {
+    background: rgba(145,162,189,.12);
+    color: #aab8d0;
+    border: 1px solid rgba(145,162,189,.2);
+}
+
+/* PAGINATION */
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 23px;
+}
+
+.pagination p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.page-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-btn {
+    background: #1b2b48;
+    color: white;
+    border: 1px solid #344762;
+    border-radius: 8px;
+    padding: 9px 14px;
+    cursor: pointer;
+    transition: .2s;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: linear-gradient(110deg,#356ee9,#7955d9);
+    border-color: transparent;
+}
+
+.page-btn:disabled {
+    opacity: .35;
+    cursor: not-allowed;
+}
+
+.page-number {
+    background: linear-gradient(110deg,#356ee9,#7955d9);
+    color: white;
+    border-radius: 8px;
+    padding: 9px 13px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.empty {
+    display: none;
+    text-align: center;
+    padding: 35px;
+    color: var(--muted);
+}
+
+.footer {
+    text-align: center;
+    padding: 35px 0 10px;
+    color: #7183a5;
+    font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .main {
+        margin-left: 220px;
+        padding: 25px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+
+@media(max-width:700px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .logo {
+        margin-bottom: 22px;
+    }
+
+    .sidebar-bottom {
+        margin-top: 15px;
+    }
+
+    .main {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .actions {
+        width: 100%;
+    }
+
+    .actions > * {
+        flex: 1;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}
+
+@media(max-width:450px) {
+    .main {
+        padding: 16px;
+    }
+
+    .table-card {
+        padding: 17px;
+    }
+
+    .pagination {
+        align-items: flex-start;
+    }
+
+    .page-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* SECURESIGHT UNIFIED SIDEBAR TYPOGRAPHY */
+.sidebar .logo,
+.sidebar .brand,
+.sidebar .side-brand {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+
+.sidebar .nav-title,
+.sidebar .menu-label {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+}
+
+.sidebar a,
+.sidebar .nav-link {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+
+.sidebar a span,
+.sidebar .nav-link span {
+    font-size: 17px !important;
+}
+
+.sidebar .sidebar-status {
+    font-size: 12px !important;
+}
+/* END UNIFIED SIDEBAR TYPOGRAPHY */
+
+
+/* STANDARD SIDEBAR FONT SIZES */
+.logo, .brand.side-brand {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+.nav-title, .menu-label {
+    font-size: 10px !important;
+    font-weight: 800 !important;
+}
+.sidebar a, .nav-link {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+}
+.sidebar a span, .nav-link span {
+    font-size: 17px !important;
+}
+
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="logo">🛡️ Secure<span>Sight</span></div>
+
+    <div class="nav-title">MAIN MENU</div>
+
+    <a href="{{ url_for('dashboard') }}"
+       class="{% if request.endpoint == 'dashboard' %}active{% endif %}">
+        <span><i class="fa-solid fa-gauge"></i></span> Overview
+    </a>
+
+    <a href="{{ url_for('visual_analytics') }}"
+       class="{% if request.endpoint == 'visual_analytics' %}active{% endif %}">
+        <span>◉</span> Visual Analytics
+    </a>
+
+    <a href="{{ url_for('sender_domains') }}"
+       class="{% if request.endpoint == 'sender_domains' %}active{% endif %}">
+        <span><i class="fa-solid fa-globe"></i></span> Sender Domains
+    </a>
+
+    <a href="{{ url_for('email_records') }}"
+       class="{% if request.endpoint == 'email_records' %}active{% endif %}">
+        <span><i class="fa-solid fa-envelope-open-text"></i></span> Email Records
+    </a>
+
+    <a href="{{ url_for('predict_email') }}"
+       class="{% if request.endpoint == 'predict_email' %}active{% endif %}">
+        <span><i class="fa-solid fa-magnifying-glass"></i></span> Email Prediction
+    </a>
+
+    <a href="{{ url_for('download_reports') }}">
+        <span>⇩</span> Download Reports
+    </a>
+
+    <a href="{{ url_for('about') }}"
+       class="{% if request.endpoint == 'about' %}active{% endif %}">
+        <span><i class="fa-solid fa-circle-info"></i></span> About Project
+    </a>
+
+    <div class="sidebar-bottom">
+
+        <div class="system-status">● System Online</div>
+
+        <a href="{{ url_for('logout') }}">
+            <span><i class="fa-solid fa-right-from-bracket"></i></span> Logout
+        </a>
+
+    </div>
+
+</aside>
+
+
+<!-- MAIN CONTENT -->
+
+<main class="main">
+
+    <header class="topbar">
+
+        <div class="breadcrumb">
+            Workspace <span>/</span> Email Records
+        </div>
+
+        <div class="user">
+            <div class="avatar">👤</div>
+            <span>{{ username }}</span>
+        </div>
+
+    </header>
+
+
+    <!-- PAGE HEADING -->
+
+    <section class="page-heading">
+
+        <div>
+            <div class="eyebrow">EMAIL DATA MANAGEMENT</div>
+
+            <h1>Email Records</h1>
+
+            <p class="subtitle">
+                Manage, filter and explore your analyzed email dataset.
+            </p>
+        </div>
+
+        <div class="ready-badge">● Records Available</div>
+
+    </section>
+
+
+    <!-- STATISTICS -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+            <div class="stat-icon">📩</div>
+            <p>Total Email Records</p>
+            <h2 id="totalCount">{{ records|length }}</h2>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">⚠️</div>
+            <p>Phishing Emails</p>
+            <h2 id="phishingCount">0</h2>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">✓</div>
+            <p>Legitimate Emails</p>
+            <h2 id="legitimateCount">0</h2>
+        </div>
+
+    </section>
+
+
+    <!-- EMAIL TABLE -->
+
+    <section class="table-card">
+
+        <div class="table-header">
+
+            <div>
+                <h2>✉ All Email Records</h2>
+                <p>Search, filter and review analyzed email information</p>
+            </div>
+
+            <div class="actions">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    class="search-box"
+                    placeholder="🔍 Search sender or subject..."
+                >
+
+                <select id="statusFilter" class="filter-select">
+                    <option value="all">All Status</option>
+                    <option value="phishing">Phishing</option>
+                    <option value="legitimate">Legitimate</option>
+                    <option value="unknown">Unknown</option>
+                </select>
+
+                <a href="{{ url_for('download_reports') }}"
+                   class="download-btn">
+                    ⬇ Download CSV
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <table id="emailTable">
+
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Sender</th>
+                        <th>Subject</th>
+                        <th>Status</th>
+                        <th>URL Count</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for email in records %}
+
+                    {% set label = email.get('label', email.get('label_original', 'Unknown')) %}
+                    {% set normalized = label|string|lower|trim %}
+
+                    <tr
+                        data-status="{% if 'phish' in normalized or 'spam' in normalized or 'fraud' in normalized or 'malicious' in normalized or normalized == '1' %}phishing{% elif 'legit' in normalized or 'ham' in normalized or 'safe' in normalized or 'benign' in normalized or normalized == '0' %}legitimate{% else %}unknown{% endif %}"
+                    >
+
+                        <td class="serial">{{ loop.index }}</td>
+
+                        <td class="sender">
+                            {{ email.get('sender','N/A') }}
+                        </td>
+
+                        <td class="subject">
+                            {{ email.get('subject','No Subject') }}
+                        </td>
+
+                        <td>
+
+                            {% if 'phish' in normalized or 'spam' in normalized or 'fraud' in normalized or 'malicious' in normalized or normalized == '1' %}
+
+                                <span class="status phishing">
+                                    ⚠️ Phishing
+                                </span>
+
+                            {% elif 'legit' in normalized or 'ham' in normalized or 'safe' in normalized or 'benign' in normalized or normalized == '0' %}
+
+                                <span class="status legitimate">
+                                    ✓ Legitimate
+                                </span>
+
+                            {% else %}
+
+                                <span class="status unknown">
+                                    {{ label }}
+                                </span>
+
+                            {% endif %}
+
+                        </td>
+
+                        <td>{{ email.get('url_count',0) }}</td>
+
+                    </tr>
+
+                    {% else %}
+
+                    <tr>
+                        <td colspan="5" class="empty">
+                            No email records found.
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+            <div class="empty" id="emptyMessage">
+                No matching email records found.
+            </div>
+
+        </div>
+
+
+        <!-- PAGINATION -->
+
+        <div class="pagination">
+
+            <p id="recordInfo">Showing 0 records</p>
+
+            <div class="page-buttons">
+
+                <button
+                    class="page-btn"
+                    id="prevBtn"
+                    onclick="changePage(-1)"
+                >
+                    ← Previous
+                </button>
+
+                <span class="page-number" id="pageNumber">1</span>
+
+                <button
+                    class="page-btn"
+                    id="nextBtn"
+                    onclick="changePage(1)"
+                >
+                    Next →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+        © 2026 SecureSight | Email Phishing Detection System
+    </footer>
+
+</main>
+
+
+<!-- SEARCH, FILTER AND PAGINATION -->
+
+<script>
+
+const rows = Array.from(
+    document.querySelectorAll("#emailTable tbody tr[data-status]")
+);
+
+const searchInput = document.getElementById("searchInput");
+const statusFilter = document.getElementById("statusFilter");
+
+const pageSize = 10;
+
+let currentPage = 1;
+let filteredRows = [];
+
+
+function updateCounts() {
+
+    const phishing = rows.filter(
+        row => row.dataset.status === "phishing"
+    ).length;
+
+    const legitimate = rows.filter(
+        row => row.dataset.status === "legitimate"
+    ).length;
+
+    document.getElementById("phishingCount").textContent = phishing;
+
+    document.getElementById("legitimateCount").textContent = legitimate;
+}
+
+
+function filterRecords() {
+
+    const search = searchInput.value.toLowerCase().trim();
+
+    const selectedStatus = statusFilter.value;
+
+    filteredRows = rows.filter(row => {
+
+        const text = row.textContent.toLowerCase();
+
+        const status = row.dataset.status;
+
+        const matchesSearch = text.includes(search);
+
+        const matchesStatus =
+            selectedStatus === "all" ||
+            status === selectedStatus;
+
+        return matchesSearch && matchesStatus;
+
+    });
+
+    currentPage = 1;
+
+    displayPage();
+}
+
+
+function displayPage() {
+
+    rows.forEach(row => {
+        row.style.display = "none";
+    });
+
+    const totalPages = Math.ceil(
+        filteredRows.length / pageSize
+    );
+
+    const safePages = Math.max(totalPages, 1);
+
+    if (currentPage > safePages) {
+        currentPage = safePages;
+    }
+
+    const start = (currentPage - 1) * pageSize;
+
+    const end = start + pageSize;
+
+    filteredRows.slice(start, end).forEach(row => {
+        row.style.display = "";
+    });
+
+    document.getElementById("emptyMessage").style.display =
+        filteredRows.length === 0 ? "block" : "none";
+
+    document.getElementById("pageNumber").textContent =
+        currentPage + " / " + safePages;
+
+    document.getElementById("recordInfo").textContent =
+        filteredRows.length === 0
+        ? "No records to display"
+        : `Showing ${start + 1}–${Math.min(end, filteredRows.length)} of ${filteredRows.length} records`;
+
+    document.getElementById("prevBtn").disabled =
+        currentPage === 1;
+
+    document.getElementById("nextBtn").disabled =
+        currentPage >= totalPages;
+
+}
+
+
+function changePage(direction) {
+
+    currentPage += direction;
+
+    displayPage();
+}
+
+
+searchInput.addEventListener("input", filterRecords);
+
+statusFilter.addEventListener("change", filterRecords);
+
+
+updateCounts();
+
+filterRecords();
+
+</script>
+
+</body>
+</html>
+

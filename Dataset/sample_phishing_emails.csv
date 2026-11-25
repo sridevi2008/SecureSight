@@ -1,0 +1,11 @@
+email_id,sender,subject,body,label,urls
+E001,security@example-bank.test,Account verification required,Please verify your account immediately. Click here: http://198.51.100.20/login,Phishing,
+E002,updates@shop.test,Your order confirmation,Thank you for your purchase. Your order will be delivered soon.,Legitimate,
+E003,support@service.test,Urgent password reset,Your password will expire. Login now and confirm your account: https://bit.ly/demo,Phishing,
+E004,newsletter@library.test,Monthly library newsletter,Here are this month's events and reading recommendations.,Legitimate,
+E005,billing@unknown.test,Payment suspended,Update your bank details immediately to unlock your account.,Phishing,
+E006,team@company.test,Meeting notes,Please find the meeting notes attached. Let us know if you have questions.,Legitimate,
+E007,admin@account.test,Security alert,Verify your login details now: http://203.0.113.10/verify,Phishing,
+E008,events@museum.test,Upcoming exhibition,We look forward to welcoming you to the exhibition next week.,Legitimate,
+E009,notice@secure.test,Confirm account access,Click here to confirm your password and avoid account suspension.,Phishing,
+E010,hr@company.test,Holiday schedule,The office holiday schedule is now available on the staff portal.,Legitimate,

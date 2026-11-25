@@ -1,0 +1,501 @@
+email_id,sender,subject,body,label,urls
+E001,security@bank.test,Account security verification - Sample 1,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E002,orders@shop.test,Order confirmation - Sample 2,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E003,support@service.test,Password expiration notice - Sample 3,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E004,hr@company.test,Office holiday schedule - Sample 4,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E005,admin@account.test,Account access warning - Sample 5,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E006,team@company.test,Weekly team meeting - Sample 6,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E007,alert@account.test,Urgent account notification - Sample 7,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E008,newsletter@library.test,Monthly newsletter - Sample 8,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E009,billing@payment.test,Payment verification required - Sample 9,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E010,manager@company.test,Project progress update - Sample 10,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E011,security@bank.test,Account security verification - Sample 11,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E012,orders@shop.test,Order confirmation - Sample 12,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E013,support@service.test,Password expiration notice - Sample 13,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E014,hr@company.test,Office holiday schedule - Sample 14,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E015,admin@account.test,Account access warning - Sample 15,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E016,team@company.test,Weekly team meeting - Sample 16,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E017,alert@account.test,Urgent account notification - Sample 17,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E018,newsletter@library.test,Monthly newsletter - Sample 18,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E019,billing@payment.test,Payment verification required - Sample 19,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E020,manager@company.test,Project progress update - Sample 20,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E021,security@bank.test,Account security verification - Sample 21,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E022,orders@shop.test,Order confirmation - Sample 22,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E023,support@service.test,Password expiration notice - Sample 23,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E024,hr@company.test,Office holiday schedule - Sample 24,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E025,admin@account.test,Account access warning - Sample 25,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E026,team@company.test,Weekly team meeting - Sample 26,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E027,alert@account.test,Urgent account notification - Sample 27,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E028,newsletter@library.test,Monthly newsletter - Sample 28,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E029,billing@payment.test,Payment verification required - Sample 29,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E030,manager@company.test,Project progress update - Sample 30,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E031,security@bank.test,Account security verification - Sample 31,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E032,orders@shop.test,Order confirmation - Sample 32,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E033,support@service.test,Password expiration notice - Sample 33,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E034,hr@company.test,Office holiday schedule - Sample 34,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E035,admin@account.test,Account access warning - Sample 35,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E036,team@company.test,Weekly team meeting - Sample 36,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E037,alert@account.test,Urgent account notification - Sample 37,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E038,newsletter@library.test,Monthly newsletter - Sample 38,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E039,billing@payment.test,Payment verification required - Sample 39,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E040,manager@company.test,Project progress update - Sample 40,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E041,security@bank.test,Account security verification - Sample 41,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E042,orders@shop.test,Order confirmation - Sample 42,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E043,support@service.test,Password expiration notice - Sample 43,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E044,hr@company.test,Office holiday schedule - Sample 44,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E045,admin@account.test,Account access warning - Sample 45,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E046,team@company.test,Weekly team meeting - Sample 46,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E047,alert@account.test,Urgent account notification - Sample 47,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E048,newsletter@library.test,Monthly newsletter - Sample 48,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E049,billing@payment.test,Payment verification required - Sample 49,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E050,manager@company.test,Project progress update - Sample 50,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E051,security@bank.test,Account security verification - Sample 51,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E052,orders@shop.test,Order confirmation - Sample 52,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E053,support@service.test,Password expiration notice - Sample 53,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E054,hr@company.test,Office holiday schedule - Sample 54,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E055,admin@account.test,Account access warning - Sample 55,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E056,team@company.test,Weekly team meeting - Sample 56,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E057,alert@account.test,Urgent account notification - Sample 57,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E058,newsletter@library.test,Monthly newsletter - Sample 58,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E059,billing@payment.test,Payment verification required - Sample 59,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E060,manager@company.test,Project progress update - Sample 60,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E061,security@bank.test,Account security verification - Sample 61,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E062,orders@shop.test,Order confirmation - Sample 62,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E063,support@service.test,Password expiration notice - Sample 63,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E064,hr@company.test,Office holiday schedule - Sample 64,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E065,admin@account.test,Account access warning - Sample 65,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E066,team@company.test,Weekly team meeting - Sample 66,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E067,alert@account.test,Urgent account notification - Sample 67,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E068,newsletter@library.test,Monthly newsletter - Sample 68,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E069,billing@payment.test,Payment verification required - Sample 69,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E070,manager@company.test,Project progress update - Sample 70,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E071,security@bank.test,Account security verification - Sample 71,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E072,orders@shop.test,Order confirmation - Sample 72,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E073,support@service.test,Password expiration notice - Sample 73,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E074,hr@company.test,Office holiday schedule - Sample 74,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E075,admin@account.test,Account access warning - Sample 75,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E076,team@company.test,Weekly team meeting - Sample 76,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E077,alert@account.test,Urgent account notification - Sample 77,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E078,newsletter@library.test,Monthly newsletter - Sample 78,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E079,billing@payment.test,Payment verification required - Sample 79,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E080,manager@company.test,Project progress update - Sample 80,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E081,security@bank.test,Account security verification - Sample 81,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E082,orders@shop.test,Order confirmation - Sample 82,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E083,support@service.test,Password expiration notice - Sample 83,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E084,hr@company.test,Office holiday schedule - Sample 84,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E085,admin@account.test,Account access warning - Sample 85,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E086,team@company.test,Weekly team meeting - Sample 86,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E087,alert@account.test,Urgent account notification - Sample 87,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E088,newsletter@library.test,Monthly newsletter - Sample 88,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E089,billing@payment.test,Payment verification required - Sample 89,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E090,manager@company.test,Project progress update - Sample 90,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E091,security@bank.test,Account security verification - Sample 91,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E092,orders@shop.test,Order confirmation - Sample 92,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E093,support@service.test,Password expiration notice - Sample 93,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E094,hr@company.test,Office holiday schedule - Sample 94,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E095,admin@account.test,Account access warning - Sample 95,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E096,team@company.test,Weekly team meeting - Sample 96,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E097,alert@account.test,Urgent account notification - Sample 97,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E098,newsletter@library.test,Monthly newsletter - Sample 98,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E099,billing@payment.test,Payment verification required - Sample 99,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E100,manager@company.test,Project progress update - Sample 100,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E101,security@bank.test,Account security verification - Sample 101,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E102,orders@shop.test,Order confirmation - Sample 102,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E103,support@service.test,Password expiration notice - Sample 103,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E104,hr@company.test,Office holiday schedule - Sample 104,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E105,admin@account.test,Account access warning - Sample 105,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E106,team@company.test,Weekly team meeting - Sample 106,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E107,alert@account.test,Urgent account notification - Sample 107,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E108,newsletter@library.test,Monthly newsletter - Sample 108,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E109,billing@payment.test,Payment verification required - Sample 109,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E110,manager@company.test,Project progress update - Sample 110,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E111,security@bank.test,Account security verification - Sample 111,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E112,orders@shop.test,Order confirmation - Sample 112,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E113,support@service.test,Password expiration notice - Sample 113,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E114,hr@company.test,Office holiday schedule - Sample 114,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E115,admin@account.test,Account access warning - Sample 115,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E116,team@company.test,Weekly team meeting - Sample 116,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E117,alert@account.test,Urgent account notification - Sample 117,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E118,newsletter@library.test,Monthly newsletter - Sample 118,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E119,billing@payment.test,Payment verification required - Sample 119,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E120,manager@company.test,Project progress update - Sample 120,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E121,security@bank.test,Account security verification - Sample 121,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E122,orders@shop.test,Order confirmation - Sample 122,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E123,support@service.test,Password expiration notice - Sample 123,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E124,hr@company.test,Office holiday schedule - Sample 124,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E125,admin@account.test,Account access warning - Sample 125,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E126,team@company.test,Weekly team meeting - Sample 126,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E127,alert@account.test,Urgent account notification - Sample 127,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E128,newsletter@library.test,Monthly newsletter - Sample 128,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E129,billing@payment.test,Payment verification required - Sample 129,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E130,manager@company.test,Project progress update - Sample 130,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E131,security@bank.test,Account security verification - Sample 131,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E132,orders@shop.test,Order confirmation - Sample 132,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E133,support@service.test,Password expiration notice - Sample 133,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E134,hr@company.test,Office holiday schedule - Sample 134,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E135,admin@account.test,Account access warning - Sample 135,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E136,team@company.test,Weekly team meeting - Sample 136,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E137,alert@account.test,Urgent account notification - Sample 137,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E138,newsletter@library.test,Monthly newsletter - Sample 138,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E139,billing@payment.test,Payment verification required - Sample 139,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E140,manager@company.test,Project progress update - Sample 140,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E141,security@bank.test,Account security verification - Sample 141,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E142,orders@shop.test,Order confirmation - Sample 142,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E143,support@service.test,Password expiration notice - Sample 143,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E144,hr@company.test,Office holiday schedule - Sample 144,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E145,admin@account.test,Account access warning - Sample 145,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E146,team@company.test,Weekly team meeting - Sample 146,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E147,alert@account.test,Urgent account notification - Sample 147,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E148,newsletter@library.test,Monthly newsletter - Sample 148,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E149,billing@payment.test,Payment verification required - Sample 149,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E150,manager@company.test,Project progress update - Sample 150,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E151,security@bank.test,Account security verification - Sample 151,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E152,orders@shop.test,Order confirmation - Sample 152,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E153,support@service.test,Password expiration notice - Sample 153,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E154,hr@company.test,Office holiday schedule - Sample 154,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E155,admin@account.test,Account access warning - Sample 155,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E156,team@company.test,Weekly team meeting - Sample 156,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E157,alert@account.test,Urgent account notification - Sample 157,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E158,newsletter@library.test,Monthly newsletter - Sample 158,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E159,billing@payment.test,Payment verification required - Sample 159,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E160,manager@company.test,Project progress update - Sample 160,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E161,security@bank.test,Account security verification - Sample 161,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E162,orders@shop.test,Order confirmation - Sample 162,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E163,support@service.test,Password expiration notice - Sample 163,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E164,hr@company.test,Office holiday schedule - Sample 164,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E165,admin@account.test,Account access warning - Sample 165,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E166,team@company.test,Weekly team meeting - Sample 166,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E167,alert@account.test,Urgent account notification - Sample 167,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E168,newsletter@library.test,Monthly newsletter - Sample 168,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E169,billing@payment.test,Payment verification required - Sample 169,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E170,manager@company.test,Project progress update - Sample 170,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E171,security@bank.test,Account security verification - Sample 171,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E172,orders@shop.test,Order confirmation - Sample 172,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E173,support@service.test,Password expiration notice - Sample 173,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E174,hr@company.test,Office holiday schedule - Sample 174,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E175,admin@account.test,Account access warning - Sample 175,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E176,team@company.test,Weekly team meeting - Sample 176,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E177,alert@account.test,Urgent account notification - Sample 177,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E178,newsletter@library.test,Monthly newsletter - Sample 178,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E179,billing@payment.test,Payment verification required - Sample 179,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E180,manager@company.test,Project progress update - Sample 180,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E181,security@bank.test,Account security verification - Sample 181,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E182,orders@shop.test,Order confirmation - Sample 182,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E183,support@service.test,Password expiration notice - Sample 183,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E184,hr@company.test,Office holiday schedule - Sample 184,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E185,admin@account.test,Account access warning - Sample 185,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E186,team@company.test,Weekly team meeting - Sample 186,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E187,alert@account.test,Urgent account notification - Sample 187,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E188,newsletter@library.test,Monthly newsletter - Sample 188,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E189,billing@payment.test,Payment verification required - Sample 189,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E190,manager@company.test,Project progress update - Sample 190,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E191,security@bank.test,Account security verification - Sample 191,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E192,orders@shop.test,Order confirmation - Sample 192,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E193,support@service.test,Password expiration notice - Sample 193,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E194,hr@company.test,Office holiday schedule - Sample 194,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E195,admin@account.test,Account access warning - Sample 195,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E196,team@company.test,Weekly team meeting - Sample 196,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E197,alert@account.test,Urgent account notification - Sample 197,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E198,newsletter@library.test,Monthly newsletter - Sample 198,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E199,billing@payment.test,Payment verification required - Sample 199,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E200,manager@company.test,Project progress update - Sample 200,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E201,security@bank.test,Account security verification - Sample 201,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E202,orders@shop.test,Order confirmation - Sample 202,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E203,support@service.test,Password expiration notice - Sample 203,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E204,hr@company.test,Office holiday schedule - Sample 204,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E205,admin@account.test,Account access warning - Sample 205,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E206,team@company.test,Weekly team meeting - Sample 206,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E207,alert@account.test,Urgent account notification - Sample 207,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E208,newsletter@library.test,Monthly newsletter - Sample 208,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E209,billing@payment.test,Payment verification required - Sample 209,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E210,manager@company.test,Project progress update - Sample 210,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E211,security@bank.test,Account security verification - Sample 211,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E212,orders@shop.test,Order confirmation - Sample 212,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E213,support@service.test,Password expiration notice - Sample 213,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E214,hr@company.test,Office holiday schedule - Sample 214,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E215,admin@account.test,Account access warning - Sample 215,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E216,team@company.test,Weekly team meeting - Sample 216,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E217,alert@account.test,Urgent account notification - Sample 217,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E218,newsletter@library.test,Monthly newsletter - Sample 218,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E219,billing@payment.test,Payment verification required - Sample 219,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E220,manager@company.test,Project progress update - Sample 220,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E221,security@bank.test,Account security verification - Sample 221,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E222,orders@shop.test,Order confirmation - Sample 222,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E223,support@service.test,Password expiration notice - Sample 223,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E224,hr@company.test,Office holiday schedule - Sample 224,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E225,admin@account.test,Account access warning - Sample 225,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E226,team@company.test,Weekly team meeting - Sample 226,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E227,alert@account.test,Urgent account notification - Sample 227,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E228,newsletter@library.test,Monthly newsletter - Sample 228,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E229,billing@payment.test,Payment verification required - Sample 229,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E230,manager@company.test,Project progress update - Sample 230,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E231,security@bank.test,Account security verification - Sample 231,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E232,orders@shop.test,Order confirmation - Sample 232,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E233,support@service.test,Password expiration notice - Sample 233,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E234,hr@company.test,Office holiday schedule - Sample 234,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E235,admin@account.test,Account access warning - Sample 235,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E236,team@company.test,Weekly team meeting - Sample 236,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E237,alert@account.test,Urgent account notification - Sample 237,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E238,newsletter@library.test,Monthly newsletter - Sample 238,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E239,billing@payment.test,Payment verification required - Sample 239,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E240,manager@company.test,Project progress update - Sample 240,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E241,security@bank.test,Account security verification - Sample 241,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E242,orders@shop.test,Order confirmation - Sample 242,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E243,support@service.test,Password expiration notice - Sample 243,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E244,hr@company.test,Office holiday schedule - Sample 244,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E245,admin@account.test,Account access warning - Sample 245,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E246,team@company.test,Weekly team meeting - Sample 246,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E247,alert@account.test,Urgent account notification - Sample 247,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E248,newsletter@library.test,Monthly newsletter - Sample 248,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E249,billing@payment.test,Payment verification required - Sample 249,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E250,manager@company.test,Project progress update - Sample 250,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E251,security@bank.test,Account security verification - Sample 251,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E252,orders@shop.test,Order confirmation - Sample 252,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E253,support@service.test,Password expiration notice - Sample 253,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E254,hr@company.test,Office holiday schedule - Sample 254,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E255,admin@account.test,Account access warning - Sample 255,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E256,team@company.test,Weekly team meeting - Sample 256,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E257,alert@account.test,Urgent account notification - Sample 257,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E258,newsletter@library.test,Monthly newsletter - Sample 258,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E259,billing@payment.test,Payment verification required - Sample 259,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E260,manager@company.test,Project progress update - Sample 260,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E261,security@bank.test,Account security verification - Sample 261,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E262,orders@shop.test,Order confirmation - Sample 262,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E263,support@service.test,Password expiration notice - Sample 263,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E264,hr@company.test,Office holiday schedule - Sample 264,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E265,admin@account.test,Account access warning - Sample 265,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E266,team@company.test,Weekly team meeting - Sample 266,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E267,alert@account.test,Urgent account notification - Sample 267,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E268,newsletter@library.test,Monthly newsletter - Sample 268,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E269,billing@payment.test,Payment verification required - Sample 269,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E270,manager@company.test,Project progress update - Sample 270,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E271,security@bank.test,Account security verification - Sample 271,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E272,orders@shop.test,Order confirmation - Sample 272,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E273,support@service.test,Password expiration notice - Sample 273,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E274,hr@company.test,Office holiday schedule - Sample 274,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E275,admin@account.test,Account access warning - Sample 275,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E276,team@company.test,Weekly team meeting - Sample 276,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E277,alert@account.test,Urgent account notification - Sample 277,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E278,newsletter@library.test,Monthly newsletter - Sample 278,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E279,billing@payment.test,Payment verification required - Sample 279,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E280,manager@company.test,Project progress update - Sample 280,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E281,security@bank.test,Account security verification - Sample 281,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E282,orders@shop.test,Order confirmation - Sample 282,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E283,support@service.test,Password expiration notice - Sample 283,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E284,hr@company.test,Office holiday schedule - Sample 284,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E285,admin@account.test,Account access warning - Sample 285,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E286,team@company.test,Weekly team meeting - Sample 286,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E287,alert@account.test,Urgent account notification - Sample 287,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E288,newsletter@library.test,Monthly newsletter - Sample 288,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E289,billing@payment.test,Payment verification required - Sample 289,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E290,manager@company.test,Project progress update - Sample 290,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E291,security@bank.test,Account security verification - Sample 291,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E292,orders@shop.test,Order confirmation - Sample 292,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E293,support@service.test,Password expiration notice - Sample 293,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E294,hr@company.test,Office holiday schedule - Sample 294,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E295,admin@account.test,Account access warning - Sample 295,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E296,team@company.test,Weekly team meeting - Sample 296,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E297,alert@account.test,Urgent account notification - Sample 297,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E298,newsletter@library.test,Monthly newsletter - Sample 298,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E299,billing@payment.test,Payment verification required - Sample 299,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E300,manager@company.test,Project progress update - Sample 300,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E301,security@bank.test,Account security verification - Sample 301,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E302,orders@shop.test,Order confirmation - Sample 302,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E303,support@service.test,Password expiration notice - Sample 303,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E304,hr@company.test,Office holiday schedule - Sample 304,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E305,admin@account.test,Account access warning - Sample 305,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E306,team@company.test,Weekly team meeting - Sample 306,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E307,alert@account.test,Urgent account notification - Sample 307,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E308,newsletter@library.test,Monthly newsletter - Sample 308,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E309,billing@payment.test,Payment verification required - Sample 309,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E310,manager@company.test,Project progress update - Sample 310,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E311,security@bank.test,Account security verification - Sample 311,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E312,orders@shop.test,Order confirmation - Sample 312,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E313,support@service.test,Password expiration notice - Sample 313,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E314,hr@company.test,Office holiday schedule - Sample 314,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E315,admin@account.test,Account access warning - Sample 315,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E316,team@company.test,Weekly team meeting - Sample 316,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E317,alert@account.test,Urgent account notification - Sample 317,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E318,newsletter@library.test,Monthly newsletter - Sample 318,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E319,billing@payment.test,Payment verification required - Sample 319,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E320,manager@company.test,Project progress update - Sample 320,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E321,security@bank.test,Account security verification - Sample 321,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E322,orders@shop.test,Order confirmation - Sample 322,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E323,support@service.test,Password expiration notice - Sample 323,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E324,hr@company.test,Office holiday schedule - Sample 324,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E325,admin@account.test,Account access warning - Sample 325,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E326,team@company.test,Weekly team meeting - Sample 326,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E327,alert@account.test,Urgent account notification - Sample 327,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E328,newsletter@library.test,Monthly newsletter - Sample 328,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E329,billing@payment.test,Payment verification required - Sample 329,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E330,manager@company.test,Project progress update - Sample 330,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E331,security@bank.test,Account security verification - Sample 331,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E332,orders@shop.test,Order confirmation - Sample 332,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E333,support@service.test,Password expiration notice - Sample 333,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E334,hr@company.test,Office holiday schedule - Sample 334,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E335,admin@account.test,Account access warning - Sample 335,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E336,team@company.test,Weekly team meeting - Sample 336,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E337,alert@account.test,Urgent account notification - Sample 337,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E338,newsletter@library.test,Monthly newsletter - Sample 338,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E339,billing@payment.test,Payment verification required - Sample 339,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E340,manager@company.test,Project progress update - Sample 340,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E341,security@bank.test,Account security verification - Sample 341,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E342,orders@shop.test,Order confirmation - Sample 342,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E343,support@service.test,Password expiration notice - Sample 343,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E344,hr@company.test,Office holiday schedule - Sample 344,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E345,admin@account.test,Account access warning - Sample 345,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E346,team@company.test,Weekly team meeting - Sample 346,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E347,alert@account.test,Urgent account notification - Sample 347,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E348,newsletter@library.test,Monthly newsletter - Sample 348,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E349,billing@payment.test,Payment verification required - Sample 349,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E350,manager@company.test,Project progress update - Sample 350,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E351,security@bank.test,Account security verification - Sample 351,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E352,orders@shop.test,Order confirmation - Sample 352,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E353,support@service.test,Password expiration notice - Sample 353,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E354,hr@company.test,Office holiday schedule - Sample 354,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E355,admin@account.test,Account access warning - Sample 355,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E356,team@company.test,Weekly team meeting - Sample 356,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E357,alert@account.test,Urgent account notification - Sample 357,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E358,newsletter@library.test,Monthly newsletter - Sample 358,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E359,billing@payment.test,Payment verification required - Sample 359,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E360,manager@company.test,Project progress update - Sample 360,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E361,security@bank.test,Account security verification - Sample 361,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E362,orders@shop.test,Order confirmation - Sample 362,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E363,support@service.test,Password expiration notice - Sample 363,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E364,hr@company.test,Office holiday schedule - Sample 364,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E365,admin@account.test,Account access warning - Sample 365,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E366,team@company.test,Weekly team meeting - Sample 366,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E367,alert@account.test,Urgent account notification - Sample 367,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E368,newsletter@library.test,Monthly newsletter - Sample 368,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E369,billing@payment.test,Payment verification required - Sample 369,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E370,manager@company.test,Project progress update - Sample 370,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E371,security@bank.test,Account security verification - Sample 371,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E372,orders@shop.test,Order confirmation - Sample 372,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E373,support@service.test,Password expiration notice - Sample 373,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E374,hr@company.test,Office holiday schedule - Sample 374,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E375,admin@account.test,Account access warning - Sample 375,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E376,team@company.test,Weekly team meeting - Sample 376,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E377,alert@account.test,Urgent account notification - Sample 377,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E378,newsletter@library.test,Monthly newsletter - Sample 378,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E379,billing@payment.test,Payment verification required - Sample 379,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E380,manager@company.test,Project progress update - Sample 380,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E381,security@bank.test,Account security verification - Sample 381,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E382,orders@shop.test,Order confirmation - Sample 382,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E383,support@service.test,Password expiration notice - Sample 383,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E384,hr@company.test,Office holiday schedule - Sample 384,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E385,admin@account.test,Account access warning - Sample 385,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E386,team@company.test,Weekly team meeting - Sample 386,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E387,alert@account.test,Urgent account notification - Sample 387,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E388,newsletter@library.test,Monthly newsletter - Sample 388,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E389,billing@payment.test,Payment verification required - Sample 389,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E390,manager@company.test,Project progress update - Sample 390,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E391,security@bank.test,Account security verification - Sample 391,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E392,orders@shop.test,Order confirmation - Sample 392,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E393,support@service.test,Password expiration notice - Sample 393,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E394,hr@company.test,Office holiday schedule - Sample 394,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E395,admin@account.test,Account access warning - Sample 395,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E396,team@company.test,Weekly team meeting - Sample 396,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E397,alert@account.test,Urgent account notification - Sample 397,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E398,newsletter@library.test,Monthly newsletter - Sample 398,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E399,billing@payment.test,Payment verification required - Sample 399,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E400,manager@company.test,Project progress update - Sample 400,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E401,security@bank.test,Account security verification - Sample 401,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E402,orders@shop.test,Order confirmation - Sample 402,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E403,support@service.test,Password expiration notice - Sample 403,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E404,hr@company.test,Office holiday schedule - Sample 404,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E405,admin@account.test,Account access warning - Sample 405,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E406,team@company.test,Weekly team meeting - Sample 406,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E407,alert@account.test,Urgent account notification - Sample 407,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E408,newsletter@library.test,Monthly newsletter - Sample 408,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E409,billing@payment.test,Payment verification required - Sample 409,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E410,manager@company.test,Project progress update - Sample 410,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E411,security@bank.test,Account security verification - Sample 411,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E412,orders@shop.test,Order confirmation - Sample 412,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E413,support@service.test,Password expiration notice - Sample 413,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E414,hr@company.test,Office holiday schedule - Sample 414,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E415,admin@account.test,Account access warning - Sample 415,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E416,team@company.test,Weekly team meeting - Sample 416,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E417,alert@account.test,Urgent account notification - Sample 417,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E418,newsletter@library.test,Monthly newsletter - Sample 418,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E419,billing@payment.test,Payment verification required - Sample 419,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E420,manager@company.test,Project progress update - Sample 420,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E421,security@bank.test,Account security verification - Sample 421,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E422,orders@shop.test,Order confirmation - Sample 422,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E423,support@service.test,Password expiration notice - Sample 423,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E424,hr@company.test,Office holiday schedule - Sample 424,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E425,admin@account.test,Account access warning - Sample 425,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E426,team@company.test,Weekly team meeting - Sample 426,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E427,alert@account.test,Urgent account notification - Sample 427,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E428,newsletter@library.test,Monthly newsletter - Sample 428,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E429,billing@payment.test,Payment verification required - Sample 429,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E430,manager@company.test,Project progress update - Sample 430,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E431,security@bank.test,Account security verification - Sample 431,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E432,orders@shop.test,Order confirmation - Sample 432,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E433,support@service.test,Password expiration notice - Sample 433,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E434,hr@company.test,Office holiday schedule - Sample 434,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E435,admin@account.test,Account access warning - Sample 435,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E436,team@company.test,Weekly team meeting - Sample 436,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E437,alert@account.test,Urgent account notification - Sample 437,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E438,newsletter@library.test,Monthly newsletter - Sample 438,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E439,billing@payment.test,Payment verification required - Sample 439,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E440,manager@company.test,Project progress update - Sample 440,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E441,security@bank.test,Account security verification - Sample 441,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E442,orders@shop.test,Order confirmation - Sample 442,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E443,support@service.test,Password expiration notice - Sample 443,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E444,hr@company.test,Office holiday schedule - Sample 444,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E445,admin@account.test,Account access warning - Sample 445,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E446,team@company.test,Weekly team meeting - Sample 446,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E447,alert@account.test,Urgent account notification - Sample 447,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E448,newsletter@library.test,Monthly newsletter - Sample 448,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E449,billing@payment.test,Payment verification required - Sample 449,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E450,manager@company.test,Project progress update - Sample 450,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E451,security@bank.test,Account security verification - Sample 451,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E452,orders@shop.test,Order confirmation - Sample 452,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E453,support@service.test,Password expiration notice - Sample 453,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E454,hr@company.test,Office holiday schedule - Sample 454,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E455,admin@account.test,Account access warning - Sample 455,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E456,team@company.test,Weekly team meeting - Sample 456,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E457,alert@account.test,Urgent account notification - Sample 457,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E458,newsletter@library.test,Monthly newsletter - Sample 458,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E459,billing@payment.test,Payment verification required - Sample 459,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E460,manager@company.test,Project progress update - Sample 460,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E461,security@bank.test,Account security verification - Sample 461,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E462,orders@shop.test,Order confirmation - Sample 462,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E463,support@service.test,Password expiration notice - Sample 463,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E464,hr@company.test,Office holiday schedule - Sample 464,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E465,admin@account.test,Account access warning - Sample 465,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E466,team@company.test,Weekly team meeting - Sample 466,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E467,alert@account.test,Urgent account notification - Sample 467,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E468,newsletter@library.test,Monthly newsletter - Sample 468,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E469,billing@payment.test,Payment verification required - Sample 469,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E470,manager@company.test,Project progress update - Sample 470,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E471,security@bank.test,Account security verification - Sample 471,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E472,orders@shop.test,Order confirmation - Sample 472,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E473,support@service.test,Password expiration notice - Sample 473,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E474,hr@company.test,Office holiday schedule - Sample 474,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E475,admin@account.test,Account access warning - Sample 475,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E476,team@company.test,Weekly team meeting - Sample 476,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E477,alert@account.test,Urgent account notification - Sample 477,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E478,newsletter@library.test,Monthly newsletter - Sample 478,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E479,billing@payment.test,Payment verification required - Sample 479,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E480,manager@company.test,Project progress update - Sample 480,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E481,security@bank.test,Account security verification - Sample 481,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E482,orders@shop.test,Order confirmation - Sample 482,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E483,support@service.test,Password expiration notice - Sample 483,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E484,hr@company.test,Office holiday schedule - Sample 484,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E485,admin@account.test,Account access warning - Sample 485,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E486,team@company.test,Weekly team meeting - Sample 486,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E487,alert@account.test,Urgent account notification - Sample 487,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E488,newsletter@library.test,Monthly newsletter - Sample 488,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E489,billing@payment.test,Payment verification required - Sample 489,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E490,manager@company.test,Project progress update - Sample 490,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
+E491,security@bank.test,Account security verification - Sample 491,Your account requires verification. Review this sample notice at https://example.test/verify,Phishing,https://example.test/verify
+E492,orders@shop.test,Order confirmation - Sample 492,Thank you for your purchase. Your sample order has been received.,Legitimate,
+E493,support@service.test,Password expiration notice - Sample 493,Your password is scheduled to expire. Visit https://example.test/password,Phishing,https://example.test/password
+E494,hr@company.test,Office holiday schedule - Sample 494,The updated office holiday schedule is available on the staff portal.,Legitimate,
+E495,admin@account.test,Account access warning - Sample 495,This sample message asks you to confirm account access at https://example.test/access,Phishing,https://example.test/access
+E496,team@company.test,Weekly team meeting - Sample 496,Our weekly project meeting is scheduled for Monday. Please review your tasks.,Legitimate,
+E497,alert@account.test,Urgent account notification - Sample 497,An unusual login was detected. Review this simulated alert at https://example.test/alert,Phishing,https://example.test/alert
+E498,newsletter@library.test,Monthly newsletter - Sample 498,Welcome to our monthly newsletter. Here are the latest updates and events.,Legitimate,
+E499,billing@payment.test,Payment verification required - Sample 499,A payment verification is pending. Review this sample at https://example.test/payment,Phishing,https://example.test/payment
+E500,manager@company.test,Project progress update - Sample 500,Please find the latest project progress summary. Thank you for your teamwork.,Legitimate,
